@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>João Paulo | Dev Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #050b2e, #000);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Particles */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #00c3ff;
+  text-shadow: 0 0 15px #00c3ff;
+}
+
+.hero p {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.hero button {
+  margin-top: 28px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #00c3ff, #7a00ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #7a00ff;
+}
+
+/* Sections */
+section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
+
+/* Glass Card */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.glass:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0,195,255,0.3);
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+.skill {
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: rgba(0,195,255,0.2);
+  transform: scale(1.08);
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.project {
+  background: rgba(255,255,255,0.08);
+  padding: 24px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(122,0,255,0.4);
+}
+
+/* Footer */
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="stars"></canvas>
+
+<header>
+  <div class="hero">
+    <h1>João <span>Paulo</span></h1>
+    <p>Desenvolvedor Back-end | Java | SpringBoot | mySQL | Docker</p>
+    <button onclick="scrollToSection()">Ver Portfólio</button>
+  </div>
+</header>
+
+<section id="about">
+  <div class="glass">
+    <h2>Sobre Mim</h2>
+    <p>
+      <p>
+Desenvolvedor Back-end com foco em Java e Spring Boot, experiência em APIs REST,
+integração com banco de dados MySQL, versionamento com Git e containers Docker.
+Buscando primeira oportunidade para aplicar boas práticas de código e arquitetura.
+</p>
+
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="glass">
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <div class="skill">Java</div>
+      <div class="skill">SpringBoot</div>
+      <div class="skill">APIs REST</div>
+      <div class="skill">mySQL</div>
+      <div class="skill">Docker</div>
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="glass">
+    <h2>Projetos</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfólio Galáxia</h3>
+        <p>Website moderno para apresentação profissional.</p>
+      </div>
+
+      <a href="https://github.com/jpsilvaa07/Portifolio" target="_blank">
+  Ver código no GitHub
+</a>
+
+      <div class="project">
+        <h3>Landing Page Tech</h3>
+        <p>Página otimizada para conversão e performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+© 2026 João Paulo — Desenvolvedor
+</footer>
+
+<script>
+function scrollToSection() {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+}
+
+/* Galaxy Particles */
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
+
+const stars = Array.from({ length: 160 }, () => ({
+  x: Math.random() * w,
+  y: Math.random() * h,
+  r: Math.random() * 1.6,
+  s: Math.random() * 0.6
+}));
+
+function draw() {
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = "white";
+
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fill();
+
+    star.y += star.s;
+    if (star.y > h) star.y = 0;
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+
+window.addEventListener("resize", () => {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>

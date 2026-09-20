@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>João Paulo | Dev Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <header>
+    <div class="hero">
+      <h1>João <span>Paulo</span></h1>
+
+      <p id="typing"></p>
+
+      <button onclick="scrollToSection()">
+        Ver Portfólio
+      </button>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="glass">
+      <h2>Sobre Mim</h2>
+
+      <p>
+        Desenvolvedor Back-end focado em Java e Spring Boot,
+        com experiência prática na construção de APIs REST,
+        autenticação JWT e integração com MySQL.
+        Busco oportunidade como Desenvolvedor Júnior para contribuir
+        com código limpo, escalável e bem documentado.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="glass">
+
+      <h2>Habilidades</h2>
+
+      <div class="skills">
+
+        <div class="skill">Java</div>
+        <div class="skill">Spring Boot</div>
+        <div class="skill">APIs REST</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Docker</div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git & GitHub</div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="glass">
+
+      <h2>Projetos</h2>
+
+      <div class="projects">
+
+        <div class="project">
+          <h3>Descobridor de Signo</h3>
+
+          <p>
+            Projeto feito para trabalho da faculdade.
+            Ele consiste em uma aplicação web simples desenvolvida em PHP,
+            que permite ao usuário descobrir seu signo zodiacal
+            a partir da data de nascimento.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Controle de Finanças</h3>
+
+          <p>
+            Aplicação web de controle financeiro pessoal
+            com dashboard moderno estilo SaaS.
+            O DevFinance permite o registro e gerenciamento
+            de receitas e despesas,
+            cálculo automático de saldo e visualização gráfica
+            dos dados financeiros.
+          </p>
+        </div>
+
+        <div class="project">
+
+          <h3>API REST - Sistema de Tarefas</h3>
+
+          <p>
+            API desenvolvida com Spring Boot utilizando
+            arquitetura em camadas,
+            autenticação JWT, MySQL e container Docker.
+          </p>
+
+          <ul>
+            <li>CRUD completo</li>
+            <li>Validação com Bean Validation</li>
+            <li>Documentação com Swagger</li>
+          </ul>
+
+        </div>
+
+        <div class="project">
+          <h3>Password Generator</h3>
+
+          <p>
+            Um gerador de senhas simples,
+            moderno e personalizável feito com HTML,
+            CSS e JavaScript.
+            O usuário pode definir o tamanho da senha
+            e escolher quais tipos de caracteres deseja incluir.
+          </p>
+        </div>
+
+      </div>
+
+      <a
+        href="https://github.com/jpsilvaa07/Portifolio"
+        target="_blank"
+      >
+        Ver código no GitHub
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 João Paulo — Desenvolvedor
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
